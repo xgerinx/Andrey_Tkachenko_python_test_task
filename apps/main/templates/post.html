@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="display: flex; justify-content: center;">
+    <h1>{{post.title}}</h1>
+</div>
+
+<div class="card mb-3">
+    <img src="{{post.image.url}}" class="card-img-top" alt="">
+    <div class="card-body">
+    <p class="card-text">{{post.text}}</p>
+    <p class="card-text"><small class="text-muted">Posted by: {{post.author}} at {{post.post_date}}</small></p>
+    <p class="card-text"><small class="text-muted">Last updated: {{post.last_update}}</small></p>
+    <p class="card-text"><small class="text-muted">Created: {{post.create_date}}</small></p>
+    </div>
+</div>
+
+{% endblock %}
